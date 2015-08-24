@@ -1,0 +1,31 @@
+<section>
+    Search by category:
+    <select name="category" id="categories" ng-model="selected" ng-repeat="categories in tea.categories">
+        <option value="{{categories}}">{{categories}}</option>
+    </select>
+
+    Search by name: <input type="text" class="search" placeholder="Search" ng-model="search.name"/>
+</section>
+
+<table>
+    <thead>
+        <th>Tea</th>
+        <th>Information</th>
+        <th>Sort By Price</th>
+    </thead>
+    <tbody ng-repeat="tea in data | filter:search">
+        <td><img src="{{tea.imageUrl}}" alt="tea" height="150" width="200"/></td>
+        <td><h3>{{tea.name}}</h3></td>
+        <td>Price: {{tea.price | currency}}</td><br>
+        <td>Caffeine Scale: {{tea.caffeineScale}}</td><br>
+        <td>Ingredients: {{tea.ingredients}}</td><br>
+        <td>Rating: {{tea.rating}}</td><br>
+        <td ng-show="{}">In Stock? {{tea.inStock}}</td><br>
+        <td>Categories:
+            <ul ng-repeat="categories in tea.categories">
+                <li>{{categories}}</li>
+            </ul>
+
+        </td>
+    </tbody>
+</table>

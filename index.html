@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="MEANTea">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>MEAN Tea</title>
+</head>
+<body ng-controller="Home">
+    <h1>WELCOME TO MEAN TEA!</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div ng-view></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/controllers.js"></script>
+</body>
+</html>
